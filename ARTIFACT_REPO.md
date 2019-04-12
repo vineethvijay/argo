@@ -117,10 +117,10 @@ data:
         endpoint: my-minio-endpoint.default:9000        #AWS => s3.amazonaws.com; GCS => storage.googleapis.com
         insecure: true                  #omit for S3/GCS. Needed when minio runs without TLS
         accessKeySecret:                #omit if accessing via AWS IAM
-          name: my-minio-cred
+          name: argo-artifacts
           key: accesskey
         secretKeySecret:                #omit if accessing via AWS IAM
-          name: my-minio-cred
+          name: argo-artifacts
           key: secretkey
 ```
 The secrets are retrieve from the namespace you use to run your workflows. Note that you can specify a `keyPrefix`.
